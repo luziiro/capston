@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="section-heading text-center mb-4">Registro de Usuario</h1>
+                        <h1 class="text-center mb-4">Registro de Usuario</h1>
                         <form id="registro-form" action="procesar_registro.php" method="post">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>

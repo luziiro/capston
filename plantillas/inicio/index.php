@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-        <section class="py-5 bg-light" id="features">
+    <section class="py-5" id="features">
         <div class="container">
             <h2 class="text-center">Características Clave</h2>
             <div class="row">
@@ -34,7 +34,7 @@
                     <p>Imagina un futuro más saludable con nuestro simulador interactivo. Cambia tus hábitos y ve cómo impacta en tu bienestar.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="demo_image.png" alt="Demostración de visualización interactiva" class="img-fluid">
+                    <img src="" alt="Demostración de visualización interactiva" class="img-fluid">
                 </div>
             </div>
         </div>
