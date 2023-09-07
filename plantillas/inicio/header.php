@@ -10,7 +10,9 @@
   <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="index.php">Health Future</a>
+        <a class="a-logo" href="/capston/plantillas/inicio/index.php">
+        <img class="logo" src="/capston/img/logo.png" alt="Logo de Health Future">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
