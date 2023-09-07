@@ -23,7 +23,10 @@
                     <a class="nav-link" href="#demo">Demostración</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registro.php">Regístrate</a>
+                    <a class="nav-link" href="/capston/plantillas/registro/registro.php">Regístrate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/capston/plantillas/login/login.php">Ingresa</a>
                 </li>
             </ul>
         </div>

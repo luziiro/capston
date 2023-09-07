@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación de Registro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="/capston/assets/estilo.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -20,7 +20,7 @@
     <script>
         // Redirigir a login.php después de 5 segundos
         setTimeout(function () {
-            window.location.href = "login.php";
+            window.location.href = "/capston/plantillas/login/login.php";
         }, 5000); // 5000 milisegundos = 5 segundos
     </script>
 </body>

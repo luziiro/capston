@@ -33,13 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             // Registro exitoso
-            header("Location: confirmacion_registro.php");
+            header("Location: /capston/plantillas/registro/confirmacion_registro.php");
         } else {
             // Error en la consulta
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     } else {
-        header("Location: registro.php?error=campos_incompletos");
+        header("Location: /capston/plantillas/registro/registro.php?error=campos_incompletos");
     }
 }
 

@@ -18,12 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Inicio de sesión exitoso
             session_start();
             $_SESSION["user_id"] = $row["id"];
-            header("Location: index.php");
+            header("Location: /capston/plantillas/inicio/index.php");
         } else {
-            header("Location: login.php?error=credenciales_invalidas");
+            header("Location: /capston/plantillas/login/login.php?error=credenciales_invalidas");
         }
     } else {
-        header("Location: login.php?error=credenciales_invalidas");
+        header("Location: /capston/plantillas/login/login.php?error=credenciales_invalidas");
     }
 
     $conn->close();
