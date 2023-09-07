@@ -4,12 +4,12 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #333333;
+    background-color: #000000;
     color: #333;
 }
 
 .card-body{
-    background-color: #333333;
+    background-color: #000000;
 }
 
 /* Letras */
@@ -32,7 +32,7 @@ label {
 
 /* Encabezado */
 header {
-    background-color: #000080;
+    background-color: #000000;
     color: #f8f8f8;
     text-align: center;
     padding: 50px 0;
@@ -40,8 +40,8 @@ header {
 
 /* Barra de navegación */
 .navbar {
-    background-color: #333333;
-    border-bottom: 1px solid #333333;
+    background-color: #000000;
+    border-bottom: 1px solid #000000;
 }
 
 .navbar-brand {
@@ -90,6 +90,29 @@ footer {
 
 /* Estilo de fondo difuminado */
 .background-difuminado {
-    background: #333333;
+    background: #000000;
 }
 
+/* Definición de la animación con @keyframes */
+@keyframes cambioColor {
+    0% {
+        color: #0000FF; /* Azul */
+    }
+    25% {
+        color: #3399FF; /* Azul claro */
+    }
+    50% {
+        color: #66CCFF; /* Azul medio */
+    }
+    75% {
+        color: #99CCFF; /* Azul claro */
+    }
+    100% {
+        color: #0000FF; /* Azul */
+    }
+}
+
+/* Aplicación de la animación al texto */
+.cambio-color {
+    animation: cambioColor 5s linear infinite;
+}
