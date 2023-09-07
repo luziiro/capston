@@ -1,5 +1,5 @@
 <?php
-include 'funciones_validacion.php';
+include '../../includes/funciones_validacion.php';
 
 $servername = "localhost"; // Cambia esto si tu servidor MySQL tiene un nombre diferente
 $username = "root"; // Cambia esto por tu nombre de usuario de MySQL
