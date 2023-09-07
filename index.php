@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluador de Salud Personalizado</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Evaluador de Salud</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#features">Características</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#demo">Demostración</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="registro.php">Regístrate</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
-    <header class="text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Evaluador de Salud Personalizado</h1>
-            <p class="lead">Descubre cómo tus elecciones de hoy pueden influir en tu bienestar futuro.</p>
-            <a href="registro.php" class="btn btn-primary btn-lg">Registrate Ahora</a>
-        </div>
-    </header>
-    
-    <section class="py-5 bg-light" id="features">
+<?php include 'header.php'; ?>
+
+        <section class="py-5 bg-light" id="features">
         <div class="container">
             <h2 class="text-center">Características Clave</h2>
             <div class="row">
@@ -75,14 +39,5 @@
             </div>
         </div>
     </section>
-    
-    <footer class="text-center py-4">
-        <p>&copy; <?php echo date("Y"); ?> Evaluador de Salud Personalizado</p>
-    </footer>
-    
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+
+<?php include 'footer.php'; ?>
