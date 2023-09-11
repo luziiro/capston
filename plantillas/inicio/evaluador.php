@@ -13,7 +13,7 @@
     <input type="number" name="pregunta2" min="0" placeholder="Veces por semana"><br><br>
 
     <!-- Pregunta 3: Consumo de frutas y verduras -->
-    <label for="pregunta3">3. ¿Consumes frutas y verduras regularmente?</label>
+    <label for="pregunta3">3. ¿Cons umes frutas y verduras regularmente?</label>
     <select name="pregunta3">
         <option value="si">Sí</option>
         <option value="no">No</option>
