@@ -18,7 +18,7 @@
         <option value="si">Sí</option>
         <option value="no">No</option>
     </select><br><br>
-    <br>
+    
 
     <!-- Pregunta 4: Peso en kilogramos -->
     <label for="pregunta4">4. ¿Cuál es tu peso actual en kilogramos?</label>
