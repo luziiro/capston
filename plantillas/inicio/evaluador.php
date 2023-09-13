@@ -3,42 +3,38 @@
 <h1>Evaluador de Salud Personalizado</h1>
 <p>Por favor, responde las siguientes preguntas para recibir una evaluación de tu salud:</p>
 
-<form method="post" action="procesar.php"> <!-- Asegúrate de que el atributo "action" apunte al archivo correcto -->
-    <!-- Pregunta 1: Horas de sueño -->
-    <label for="pregunta1">1. ¿Cuántas horas duermes por noche?</label>
-    <input type="number" name="pregunta1" min="0" step="0.5" placeholder="Horas"><br><br>
+<form method="post" action="procesar.php">
+    <label for="altura">Altura en metros:</label>
+    <input type="number" name="altura" step="0.01" required><br><br>
 
-    <!-- Pregunta 2: Ejercicio semanal -->
-    <label for="pregunta2">2. ¿Cuántas veces a la semana haces ejercicio?</label>
-    <input type="number" name="pregunta2" min="0" placeholder="Veces por semana"><br><br>
+    <label for="peso">Peso en kilogramos:</label>
+    <input type="number" name="peso" step="0.01" required><br><br>
 
-    <!-- Pregunta 3: Consumo de frutas y verduras -->
-    <label for="pregunta3">3. ¿Cons umes frutas y verduras regularmente?</label>
-    <select name="pregunta3">
+    <label for="edad">Edad:</label>
+    <input type="number" name="edad" required><br><br>
+
+    <label for="horas_sueno">Horas de sueño por noche:</label>
+    <input type="number" name="horas_sueno" step="0.5" required><br><br>
+
+    <label for="ejercicio_semanal">Veces por semana que haces ejercicio:</label>
+    <input type="number" name="ejercicio_semanal" required><br><br>
+
+    <label for="consume_frutas_verduras">¿Consumes frutas y verduras regularmente?</label>
+    <select name="consume_frutas_verduras" required>
         <option value="si">Sí</option>
         <option value="no">No</option>
     </select><br><br>
 
-    <!-- Pregunta 4: Peso en kilogramos -->
-    <label for="pregunta4">4. ¿Cuál es tu peso actual en kilogramos?</label>
-    <input type="number" name="pregunta4" min="0" step="0.1" placeholder="Peso (kg)"><br><br>
+    <label for="colesterol">Nivel de colesterol (mg/dL):</label>
+    <input type="number" name="colesterol" step="1" required><br><br>
 
-    <!-- Pregunta 5: Altura en centímetros -->
-    <label for="pregunta5">5. ¿Cuál es tu altura en centímetros?</label>
-    <input type="number" name="pregunta5" min="0" placeholder="Altura (cm)"><br><br>
+    <label for="presion_arterial">Presión arterial (mm Hg):</label>
+    <input type="number" name="presion_arterial" step="1" required><br><br>
 
-    <!-- Pregunta 6: Edad -->
-    <label for="pregunta6">6. ¿Cuál es tu edad?</label>
-    <input type="number" name="pregunta6" min="0" placeholder="Edad"><br><br>
-
-    <!-- Botón para calcular la evaluación -->
     <input type="submit" value="Calcular Evaluación">
 </form>
 
-<!-- Espacio para mostrar la evaluación -->
 <div id="resultado"></div>
-
-<!-- Espacio para mostrar el gráfico -->
 <div id="grafico"></div>
 
 <?php include 'footer.php'; ?>
