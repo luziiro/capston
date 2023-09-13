@@ -1,25 +1,35 @@
 <?php
-// Obtener respuestas a las preguntas del formulario
-$respuesta1 = floatval($_POST['pregunta1']);
-$respuesta2 = intval($_POST['pregunta2']);
-$respuesta3 = $_POST['pregunta3'];
-$respuesta4 = floatval($_POST['pregunta4']);
-$respuesta5 = intval($_POST['pregunta5']);
-$respuesta6 = intval($_POST['pregunta6']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtén los datos del formulario y realiza cálculos de salud aquí
 
-// Ejecutar el script de Python y obtener la salida
-$pythonScript = 'calcular_evaluacion.py';
-$command = escapeshellcmd("python $pythonScript $respuesta1 $respuesta2 $respuesta3 $respuesta4 $respuesta5 $respuesta6");
-$output = shell_exec($command);
+    // Por ejemplo, calculamos el IMC
+    $altura = floatval($_POST["altura"]);
+    $peso = floatval($_POST["peso"]);
+    $imc = $peso / ($altura * $altura);
 
-// Decodificar la salida para obtener la evaluación y los datos del gráfico
-list($evaluacion, $grafico) = explode(':::', $output);
+    // Mostrar el resultado del IMC
+    echo "<h2>Resultados</h2>";
+    echo "<p>Tu IMC es: " . $imc . "</p>";
 
-// Mostrar la evaluación en la página
-echo "<h2>Evaluación de Salud</h2>";
-echo "<p>$evaluacion</p>";
+    // Mostrar recomendaciones de salud basadas en el IMC
+    echo "<h2>Recomendaciones de salud basadas en el IMC</h2>";
+    if ($imc < 18.5) {
+        echo "<p>Tu IMC indica que estás dentro del rango de peso insuficiente. Considera hablar con un profesional de salud para obtener recomendaciones adecuadas.</p>";
+        echo "<p>Recuerda que es importante aumentar tu ingesta calórica y nutricional para lograr un peso saludable. Consulta a un dietista o médico para obtener orientación personalizada.</p>";
+    } elseif ($imc >= 18.5 && $imc < 25) {
+        echo "<p>Tu IMC indica que estás dentro del rango de peso normal o saludable. ¡Sigue manteniendo tus hábitos de salud!</p>";
+        echo "<p>Para mantener un peso saludable, es fundamental seguir una dieta equilibrada y hacer ejercicio regularmente. También es importante priorizar el bienestar mental y emocional.</p>";
+    } elseif ($imc >= 25 && $imc < 30) {
+        echo "<p>Tu IMC indica que estás dentro del rango de sobrepeso. Considera hacer más ejercicio y revisar tu dieta.</p>";
+        echo "<p>Para bajar de peso, es recomendable reducir la ingesta calórica, optar por alimentos nutritivos y mantener una rutina de ejercicios regular. Consulta a un profesional de salud para un plan personalizado.</p>";
+    } else {
+        echo "<p>Tu IMC indica que estás dentro del rango de obesidad. Es importante tomar medidas para mejorar tu salud, como una dieta equilibrada y ejercicio regular.</p>";
+        echo "<p>Para reducir la obesidad, es fundamental hacer cambios en la dieta y aumentar la actividad física. Considera trabajar con un equipo médico y de salud para abordar este desafío de manera efectiva.</p>";
+    }
 
-// Mostrar el gráfico en la página
-echo "<h2>Gráfico de Salud</h2>";
-echo "<img src='$grafico' alt='Gráfico de Salud'>";
+    // Aquí puedes agregar más recomendaciones de salud basadas en otros datos ingresados por el usuario (colesterol, presión arterial, etc.).
+
+    // También puedes generar visualizaciones adicionales según los datos recopilados.
+
+}
 ?>
