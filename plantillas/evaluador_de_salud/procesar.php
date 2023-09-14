@@ -31,5 +31,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // También puedes generar visualizaciones adicionales según los datos recopilados.
 
+
+    
 }
 ?>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $altura = $_POST["altura"];
+    $peso = $_POST["peso"];
+    $edad = $_POST["edad"];
+    $horas_sueno = $_POST["horas_sueno"];
+    $ejercicio_semanal = $_POST["ejercicio_semanal"];
+    $consume_frutas_verduras = $_POST["consume_frutas_verduras"];
+    $colesterol = $_POST["colesterol"];
+    $presion_arterial = $_POST["presion_arterial"];
+
+    // Nombre de los títulos de las columnas
+    $titulos = ["Altura (m)", "Peso (kg)", "Edad", "Horas de sueño", "Ejercicio semanal", "Frutas y verduras", "Colesterol (mg/dL)", "Presión arterial (mm Hg)"];
+
+    // Abre o crea el archivo CSV en modo escritura
+    $archivo_csv = fopen('datos.csv', 'a');
+
+    // Si el archivo está vacío, escribe los títulos
+    if (filesize('datos.csv') === 0) {
+        fputcsv($archivo_csv, $titulos);
+    }
+
+    // Escribe los datos en el archivo CSV
+    fputcsv($archivo_csv, [$altura, $peso, $edad, $horas_sueno, $ejercicio_semanal, $consume_frutas_verduras, $colesterol, $presion_arterial]);
+
+    // Cierra el archivo CSV
+    fclose($archivo_csv);
+
+    echo "Datos guardados en datos.csv correctamente.";
+} else {
+    echo "Acceso denegado.";
+}
+?>
+
