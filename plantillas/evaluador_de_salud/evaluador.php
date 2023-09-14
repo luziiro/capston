@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../inicio/header.php'; ?>
 
 <h1>Evaluador de Salud Personalizado</h1>
 <p>Por favor, responde las siguientes preguntas para recibir una evaluación de tu salud:</p>
@@ -37,4 +37,4 @@
 <div id="resultado"></div>
 <div id="grafico"></div>
 
-<?php include 'footer.php'; ?>
+<?php include '../inicio/footer.php'; ?>
