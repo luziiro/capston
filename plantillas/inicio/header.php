@@ -27,6 +27,7 @@
             <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
           </li>
         </ul>
+        <ul class="navbar-nav">
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Usuario
@@ -38,6 +39,7 @@
               <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
             </ul>
           </li>
+        </ul>
       </div>
     </div>
   </nav>
