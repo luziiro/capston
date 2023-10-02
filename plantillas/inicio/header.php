@@ -36,7 +36,7 @@
                 // El usuario está logeado, muestra el nombre del usuario
                 echo $_SESSION["nombre_usuario"];
             } else {
-                // El usuario no está logeado, muestra "Ingresa" y "Registro"
+                // El usuario no está logeado, muestra "Usuario"
                 echo 'Usuario';
             }
             ?>
