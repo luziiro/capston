@@ -28,4 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn->close();
 }
+
+if (password_verify($contrasena, $row["contrasena"])) {
+    // Inicio de sesión exitoso
+    session_start();
+    $_SESSION["user_id"] = $row["id"];
+    $_SESSION["usuario_logueado"] = true; // Establece la variable de sesión
+    header("Location: /capston/plantillas/inicio/index.php");
+} else {
+    header("Location: /capston/plantillas/login/login.php?error=credenciales_invalidas");
+}
 ?>

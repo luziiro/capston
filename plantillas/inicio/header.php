@@ -9,37 +9,45 @@
   </head> 
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Health Future</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/capston/plantillas/inicio/index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/capston/plantillas/inicio/caracteristicas.php">Características</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Usuario
-              </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/capston/plantillas/login/login.php">Ingresa</a></li>
-              <li><a class="dropdown-item" href="/capston/plantillas/registro/registro.php">Registro</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Health Future</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/capston/plantillas/inicio/index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/capston/plantillas/inicio/caracteristicas.php">Características</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuario
+          </a>
+          <ul class="dropdown-menu">
+            <?php
+            session_start();
+            if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
+                // El usuario está logeado, muestra solo "Cerrar sesión"
+                echo '<li><a class="dropdown-item" href="/capston/plantillas/login/procesar_logout.php">Cerrar sesión</a></li>';
+            } else {
+                // El usuario no está logeado, muestra "Ingresa" y "Registro"
+                echo '<li><a class="dropdown-item" href="/capston/plantillas/login/login.php">Ingresa</a></li>';
+                echo '<li><a class="dropdown-item" href="/capston/plantillas/registro/registro.php">Registro</a></li>';
+            }
+            ?>
+            <li><hr class="dropdown-divider"></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
