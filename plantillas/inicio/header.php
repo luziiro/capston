@@ -30,11 +30,19 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Usuario
+            <?php
+            session_start();
+            if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
+                // El usuario está logeado, muestra el nombre del usuario
+                echo $_SESSION["nombre_usuario"];
+            } else {
+                // El usuario no está logeado, muestra "Ingresa" y "Registro"
+                echo 'Usuario';
+            }
+            ?>
           </a>
           <ul class="dropdown-menu">
             <?php
-            session_start();
             if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
                 // El usuario está logeado, muestra solo "Cerrar sesión"
                 echo '<li><a class="dropdown-item" href="/capston/plantillas/login/procesar_logout.php">Cerrar sesión</a></li>';
