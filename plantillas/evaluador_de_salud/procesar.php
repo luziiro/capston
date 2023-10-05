@@ -118,4 +118,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Acceso denegado.";
 }
+
+// -- Crear la tabla datos_usuario si aún no existe
+//CREATE TABLE IF NOT EXISTS datos_usuario (
+//    id INT AUTO_INCREMENT PRIMARY KEY,
+//    altura DECIMAL(5, 2),
+//    peso DECIMAL(5, 2),
+//    edad INT,
+//    horas_sueno DECIMAL(4, 1),
+//    ejercicio_semanal VARCHAR(255),
+//    consume_frutas_verduras BOOLEAN,
+//    colesterol DECIMAL(4, 2),
+//    presion_arterial VARCHAR(10)
+//);
 ?>
