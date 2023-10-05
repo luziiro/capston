@@ -2,9 +2,19 @@
 
 <header class="text-center py-5">
     <div class="container">
-        <h1 class="display-4 cambio-color">Health Future</h1>
-        <p class="lead">Descubre cómo tus elecciones de hoy pueden influir en tu bienestar futuro.</p>
-        <a href="/capston/plantillas/registro/registro.php" class="btn btn-primary btn-lg">Regístrate Ahora</a>
+        <?php
+        if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
+            // El usuario está logeado, muestra esto
+            echo '<h1 class="display-4 cambio-color">Health Future</h1>';
+            echo '<p class="lead">Descubre cómo tus elecciones de hoy pueden influir en tu bienestar futuro.</p>';
+            echo '<a href="/capston/plantillas/evaluador_de_salud/evaluador.php" class="btn btn-primary btn-lg">Prueba nuestro evaluador</a>';
+        } else {
+            // El usuario no está logeado, muestra esto otro
+            echo '<h1 class="display-4 cambio-color">Health Future</h1>';
+            echo '<p class="lead">Descubre cómo tus elecciones de hoy pueden influir en tu bienestar futuro.</p>';
+            echo '<a href="/capston/plantillas/registro/registro.php" class="btn btn-primary btn-lg">Regístrate Ahora</a>';
+        }
+        ?>
     </div>
 </header>
 
