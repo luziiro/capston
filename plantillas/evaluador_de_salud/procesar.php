@@ -68,5 +68,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Acceso denegado.";
 }
-?>
 
+// codigo para guardar los datos en la base de datos
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtén los datos del formulario
+    $altura = $_POST["altura"];
+    $peso = $_POST["peso"];
+    $edad = $_POST["edad"];
+    $horas_sueno = $_POST["horas_sueno"];
+    $ejercicio_semanal = $_POST["ejercicio_semanal"];
+    $consume_frutas_verduras = $_POST["consume_frutas_verduras"];
+    $colesterol = $_POST["colesterol"];
+    $presion_arterial = $_POST["presion_arterial"];
+
+    // Configura la conexión a la base de datos usando phpMyAdmin
+    $servername = "localhost"; // Cambia esto si tu servidor MySQL tiene un nombre diferente
+    $username = "root"; // Cambia esto por tu nombre de usuario de MySQL
+    $password = ""; // Cambia esto por tu contraseña de MySQL
+    $dbname = "evaluador_salud"; // Cambia esto por el nombre de tu base de datos
+
+    // Crea una conexión a la base de datos
+    $conexion = new mysqli($servername, $username, $password, $dbname);
+
+    // Verifica la conexión
+    if ($conexion->connect_error) {
+        die("Error de conexión a la base de datos: " . $conexion->connect_error);
+    }
+
+    // Prepara la consulta SQL para insertar los datos en la base de datos
+    $sql = "INSERT INTO datos_usuario (altura, peso, edad, horas_sueno, ejercicio_semanal, consume_frutas_verduras, colesterol, presion_arterial) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+    // Prepara la sentencia SQL
+    $stmt = $conexion->prepare($sql);
+
+    // Vincula los parámetros
+    $stmt->bind_param("ddiiisii", $altura, $peso, $edad, $horas_sueno, $ejercicio_semanal, $consume_frutas_verduras, $colesterol, $presion_arterial);
+
+    // Ejecuta la consulta
+    if ($stmt->execute()) {
+        echo "Datos guardados en la base de datos correctamente.";
+    } else {
+        echo "Error al guardar los datos en la base de datos: " . $stmt->error;
+    }
+
+    // Cierra la conexión y la sentencia
+    $stmt->close();
+    $conexion->close();
+} else {
+    echo "Acceso denegado.";
+}
+?>
