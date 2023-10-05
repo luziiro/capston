@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="display-4 cambio-color">Health Future</h1>
         <p class="lead">Descubre cómo tus elecciones de hoy pueden influir en tu bienestar futuro.</p>
-        <a href="registro.php" class="btn btn-primary btn-lg">Regístrate Ahora</a>
+        <a href="/capston/plantillas/registro/registro.php" class="btn btn-primary btn-lg">Regístrate Ahora</a>
     </div>
 </header>
 
