@@ -1,0 +1,19 @@
+
+
+body {
+  overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.content {
+  color: blue; /* Establece el color del texto en azul */
+  /* Otros estilos personalizados */
+}
