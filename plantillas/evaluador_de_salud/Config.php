@@ -1,3 +1,3 @@
 <?php
-define("API_KEY", "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"); // Reemplaza "tu_clave_de_API_de_OpenAI" con tu clave de API real
+define("API_KEY", "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"); // Reemplaza "tu_clave_de_API_de_OpenAI" con tu clave de API real
 ?>

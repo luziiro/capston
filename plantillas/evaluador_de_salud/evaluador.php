@@ -72,8 +72,9 @@
       <label class="form-label" for="colesterol">Nivel de colesterol (mg/dL):</label>
       <input class="form-input" type="number" name="colesterol" step="1" required>
     </div>
+    
 
-    <div class "form-field">
+    <div class="form-field">
       <label class="form-label" for="presion_arterial">Presión arterial (mm Hg):</label>
       <input class="form-input" type="number" name="presion_arterial" step="1" required>
     </div>
