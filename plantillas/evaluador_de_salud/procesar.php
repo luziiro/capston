@@ -1,4 +1,56 @@
 <?php
+include 'config.php'; // Incluye el archivo config.php con tu clave de API
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Tu código de procesamiento de datos aquí
+
+    // Luego, agrega el código para realizar una solicitud a la API de OpenAI
+    $api_key = API_KEY; // Obtiene la clave de API del archivo de configuración
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://api.openai.com/v1/chat/completions');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json',
+        'Authorization: Bearer ' . $api_key,
+    ]);
+
+    // Define el contenido del mensaje para la solicitud a la API
+    $messages = [
+        [
+            "role" => "system",
+            "content" => "You are a helpful assistant."
+        ],
+        [
+            "role" => "user",
+            "content" => "Hello!"
+        ]
+    ];
+
+    $data = [
+        "model" => "gpt-3.5-turbo",
+        "messages" => $messages
+    ];
+
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+    $response = curl_exec($ch);
+
+    if ($response === false) {
+        echo "Error en la solicitud a la API de OpenAI: " . curl_error($ch);
+    } else {
+        // Manejar la respuesta de la API de OpenAI (texto generado)
+        // Puedes mostrar o procesar el texto generado aquí
+        echo "<h2>Respuesta de la IA</h2>";
+        echo "<p>" . $response . "</p>";
+    }
+
+    curl_close($ch);
+}
+?>
+
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtén los datos del formulario y realiza cálculos de salud aquí
 
