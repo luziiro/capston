@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include 'header.php';
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluador de Salud Personalizado</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/capston/assets/estilo.css?ver=2">
-    <style>
-        body {
-            overflow: hidden;
-            background: #000;
-            color: blue;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-        }
-
-        .cambio-color {
-            color: blue;
-        }
-
-        /* Estilo para el nuevo carrusel de imágenes */
-        #carouselEjemplo {
-            margin-top: 30px;
-        }
-
-        #carouselEjemplo img {
-            max-height: 300px; /* Ajusta la altura máxima de las imágenes */
-            margin: 0 auto;
-        }
-    </style>
-</head>
-
-<body>
-    <video autoplay loop muted playsinline>
-        <source src="https://static.videezy.com/system/resources/previews/000/051/538/original/Medical_Health_Background.mp4" type="video/mp4">
-    </video>
     <div class="content">
         <header class="text-center py-5">
             <div class="container">
@@ -83,27 +33,7 @@
                         </div>
             </div>
         </div>
-        <!-- Carrusel de imágenes -->
-        <div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://static.vecteezy.com/system/resources/previews/018/741/048/non_2x/digital-medical-health-futuristic-and-global-metaverse-technology-doctor-wearing-best-vr-headset-equipment-to-check-internal-organs-patient-on-screen-future-innovation-concept-photo.jpg" class="d-block w-50" alt="Doctor Cartoon">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://consultorsalud.com/wp-content/uploads/2021/05/Los-Medicos-y-la-Inteligencia-Artificial-en-Salud-.jpg" class="d-block w-50" alt="Médicos e Inteligencia Artificial">
-                </div>
-                
-            </div>
-            <a class="carousel-control-prev" href="#carouselEjemplo" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselEjemplo" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </a>
-        </div>
-        <!-- Fin del carrusel de imágenes -->
+
         <section class="py-5" id="demo">
             <div class="container">
                 <h2 class="text-center">Visualización Interactiva</h2>
@@ -117,9 +47,7 @@
                 </div>
             </div>
         </section>
-        <?php
-        include 'footer.php';
-        ?>
-    </div>
-</body>
-</html>
+
+<?php
+include 'footer.php';
+?>
