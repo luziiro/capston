@@ -34,20 +34,6 @@ include 'header.php';
             </div>
         </div>
 
-        <section class="py-5" id="demo">
-            <div class="container">
-                <h2 class="text-center">Visualización Interactiva</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Imagina un futuro más saludable con nuestro simulador interactivo.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="" alt="Demostración de visualización interactiva" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
-
 <?php
 include 'footer.php';
 ?>
