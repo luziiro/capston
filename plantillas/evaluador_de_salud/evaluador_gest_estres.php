@@ -19,7 +19,7 @@
                         <option value="trabajo">Trabajo</option>
                         <option value="familia">Problemas familiares</option>
                         <option value="estudios">Estudios</option>
-                        <option value="otro">Otro (especificar abajo)</option>
+                        <option value="otro">Otro</option>
                     </select>
                 </div>
                 <button style="margin-top: 10px" type="submit" class="btn btn-primary">Registrar Estrés</button>
