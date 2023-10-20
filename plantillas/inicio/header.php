@@ -28,6 +28,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador_home.php">Evaluador home(test(test))</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
