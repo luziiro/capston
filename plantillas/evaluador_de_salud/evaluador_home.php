@@ -30,6 +30,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Hábitos de Vida</h5>
+                        <p class="card-text">Evalúa y registra tus hábitos diarios para mantener un estilo de vida saludable y recibe recomendaciones para mejorar tu salud.</p>
+                        <a href="evaluador_vida.php" class="btn btn-primary">Ir a Hábitos de Vida</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
