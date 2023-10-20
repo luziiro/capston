@@ -48,8 +48,43 @@
             </select>
         </div>
 
-        <button style="margin-top: 10px" class="btn btn-primary">Guardar</button>
+        <button style="margin-top: 10px" class="btn btn-primary" id="calcularBtn">Calcular Evaluación</button>
     </div>
 </div>
+
+<!-- Modal para mostrar recomendaciones -->
+<div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="resultadoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultadoModalLabel">Recomendación para mejorar tu salud</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" id="cerrarModalBtn">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Recomendación se mostrará aquí -->
+                <p id="recomendacionText">Aquí aparecerá tu recomendación personalizada para mejorar tu salud.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("calcularBtn").addEventListener("click", function() {
+        // Aquí debes realizar los cálculos y generar recomendaciones
+        // Para simplificar, dejaremos una recomendación de ejemplo
+        var recomendacion = "Hemos calculado tus hábitos y te recomendamos hacer ejercicio regularmente y llevar una dieta equilibrada para mejorar tu salud.";
+
+        // Mostrar la recomendación en la ventana modal
+        document.getElementById("recomendacionText").textContent = recomendacion;
+        $('#resultadoModal').modal('show');
+    });
+
+    // Botón para cerrar la ventana modal
+    document.getElementById("cerrarModalBtn").addEventListener("click", function() {
+        $('#resultadoModal').modal('hide');
+    });
+</script>
 
 <?php include '../inicio/footer.php'; ?>
