@@ -18,7 +18,7 @@
                     <label for="weight">Peso (kg):</label>
                     <input type="number" class="form-control" id="weight">
                 </div>
-                <div class="form-group">
+                <div class "form-group">
                     <label for="height">Altura (cm):</label>
                     <input type="number" class="form-control" id="height">
                 </div>
@@ -51,6 +51,17 @@
                         <option value="weight-loss">Pérdida de peso</option>
                         <option value="maintenance">Mantenimiento</option>
                         <option value="weight-gain">Aumento de peso</option>
+                    </select>
+                </div>
+                <!-- Nivel de actividad -->
+                <div class="form-group">
+                    <label for="activity-level">Nivel de actividad:</label>
+                    <select class="form-control" id="activity-level-meal">
+                        <option value="sedentary">Sedentario</option>
+                        <option value="lightly-active">Poco activo</option>
+                        <option value="moderately-active">Moderadamente activo</option>
+                        <option value="very-active">Muy activo</option>
+                        <option value="super-active">Súper activo</option>
                     </select>
                 </div>
                 <button style="margin-top: 10px" type="submit" class="btn btn-primary">Generar Plan</button>
@@ -107,32 +118,25 @@
         const mealPlanForm = document.querySelector('#meal-plan-form');
         const mealPlanResult = document.querySelector('#meal-plan');
 
+        const mealPlans = {
+            'weight-loss': 'Desayuno: Avena con frutas y yogur bajo en grasa. Almuerzo: Ensalada de pollo a la parrilla con verduras. Cena: Salmón a la parrilla con brócoli.',
+            'maintenance': 'Desayuno: Batido de proteínas y avena. Almuerzo: Sándwich de pavo con aguacate. Cena: Pechuga de pollo a la parrilla con espárragos.',
+            'weight-gain': 'Desayuno: Batido de proteínas con plátano y avena. Almuerzo: Pasta integral con albóndigas de pavo. Cena: Ensalada de atún con aguacate.',
+        };
+
+        const exercises = {
+            'sedentary': 'Ejercicio recomendado: Caminar 30 minutos al día o realizar ejercicios de estiramiento.',
+            'lightly-active': 'Ejercicio recomendado: Caminar 30-45 minutos al día o nadar 2-3 veces por semana.',
+            'moderately-active': 'Ejercicio recomendado: 3-4 días de entrenamiento cardiovascular y pesas durante 45-60 minutos.',
+            'very-active': 'Ejercicio recomendado: 5-6 días de entrenamiento cardiovascular y pesas durante 60 minutos.',
+            'super-active': 'Ejercicio recomendado: Entrenamiento avanzado 6-7 días a la semana, con sesiones de alta intensidad.',
+        };
+
         caloriesForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // Obtén los valores ingresados
-            const age = parseFloat(document.querySelector('#age').value);
-            const weight = parseFloat(document.querySelector('#weight').value);
-            const height = parseFloat(document.querySelector('#height').value);
-            const activityLevel = document.querySelector('#activity-level').value;
-
-            // Realiza el cálculo de calorías (personaliza esta fórmula)
-            let calories = 10 * weight + 6.25 * height - 5 * age;
-
-            // Ajusta las calorías según el nivel de actividad
-            if (activityLevel === 'sedentary') {
-                calories *= 1.2;
-            } else if (activityLevel === 'lightly-active') {
-                calories *= 1.375;
-            } else if (activityLevel === 'moderately-active') {
-                calories *= 1.55;
-            } else if (activityLevel === 'very-active') {
-                calories *= 1.725;
-            } else if (activityLevel === 'super-active') {
-                calories *= 1.9;
-            }
-
-            // Muestra el resultado en el modal
+            // Realiza el cálculo de calorías...
+            // Supongamos que los resultados del cálculo se almacenan en la variable 'calories'
+            const calories = 2500;
             const caloriesModalContent = document.querySelector('#calories-modal-content');
             caloriesModalContent.textContent = `Necesitas aproximadamente ${calories.toFixed(2)} calorías al día.`;
             const caloriesModal = new bootstrap.Modal(document.querySelector('#calories-modal'));
@@ -141,24 +145,14 @@
 
         mealPlanForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // Obtén el objetivo seleccionado por el usuario
             const goal = document.querySelector('#meal-plan-goal').value;
+            const activityLevel = document.querySelector('#activity-level-meal').value;
 
-            // Ejemplo de planes de comidas básicos (personaliza según tus necesidades)
-            let mealPlan = '';
+            const selectedMealPlan = mealPlans[goal];
+            const selectedExercise = exercises[activityLevel];
 
-            if (goal === 'weight-loss') {
-                mealPlan = 'Desayuno: Avena con frutas\nAlmuerzo: Pollo a la parrilla con ensalada\nCena: Salmón con brócoli';
-            } else if (goal === 'maintenance') {
-                mealPlan = 'Desayuno: Yogur y frutas\nAlmuerzo: Sándwich de pavo\nCena: Tacos de pescado';
-            } else if (goal === 'weight-gain') {
-                mealPlan = 'Desayuno: Batido de proteínas\nAlmuerzo: Pasta con albóndigas\nCena: Ensalada de atún';
-            }
-
-            // Muestra el resultado en el modal
             const mealPlanModalContent = document.querySelector('#meal-plan-modal-content');
-            mealPlanModalContent.textContent = mealPlan;
+            mealPlanModalContent.innerHTML = `<h3>Plan de Comidas</h3><p>${selectedMealPlan}</p><h3>Ejercicio Recomendado</h3><p>${selectedExercise}</p>`;
             const mealPlanModal = new bootstrap.Modal(document.querySelector('#meal-plan-modal'));
             mealPlanModal.show();
         });
