@@ -18,7 +18,7 @@
                     <label for="weight">Peso (kg):</label>
                     <input type="number" class="form-control" id="weight">
                 </div>
-                <div class "form-group">
+                <div class="form-group">
                     <label for="height">Altura (cm):</label>
                     <input type="number" class="form-control" id="height">
                 </div>
@@ -97,7 +97,7 @@
 <div class="modal" tabindex="-1" role="dialog" id="meal-plan-modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class "modal-header">
                 <h5 class="modal-title">Plan de Comidas</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -134,9 +134,25 @@
 
         caloriesForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Realiza el cálculo de calorías...
-            // Supongamos que los resultados del cálculo se almacenan en la variable 'calories'
-            const calories = 2500;
+            const age = parseFloat(document.querySelector('#age').value);
+            const weight = parseFloat(document.querySelector('#weight').value);
+            const height = parseFloat(document.querySelector('#height').value);
+            const activityLevel = document.querySelector('#activity-level').value;
+
+            let calories = 10 * weight + 6.25 * height - 5 * age;
+
+            if (activityLevel === 'sedentary') {
+                calories *= 1.2;
+            } else if (activityLevel === 'lightly-active') {
+                calories *= 1.375;
+            } else if (activityLevel === 'moderately-active') {
+                calories *= 1.55;
+            } else if (activityLevel === 'very-active') {
+                calories *= 1.725;
+            } else if (activityLevel === 'super-active') {
+                calories *= 1.9;
+            }
+
             const caloriesModalContent = document.querySelector('#calories-modal-content');
             caloriesModalContent.textContent = `Necesitas aproximadamente ${calories.toFixed(2)} calorías al día.`;
             const caloriesModal = new bootstrap.Modal(document.querySelector('#calories-modal'));
