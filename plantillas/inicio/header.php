@@ -9,16 +9,48 @@
     <link rel="stylesheet" type="text/css" href="/capston/assets/estilo.css?ver=2">
     <!-- Agregamos un enlace a tu archivo de estilo personalizado (si lo tienes) -->
     <link rel="stylesheet" type="text/css" href="estilo-fondo.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css"> <!-- Enlace a tu archivo CSS personalizado -->
+    <style>
+        /* Estilos personalizados */
+        .navbar {
+            background-color: transparent; /* Fondo transparente para que la imagen de fondo sea visible */
+        }
+
+        .navbar-brand {
+            color: #fff; /* Cambia el color del texto del logo a tu preferencia */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff; /* Cambia el color del ícono del botón del menú a tu preferencia */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff; /* Cambia el color del texto de las opciones del menú a tu preferencia */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00; /* Cambia el color al pasar el mouse sobre las opciones del menú a tu preferencia */
+        }
+
+        /* Personaliza el fondo del encabezado superior */
+        .navbar-top {
+            background-color: #3498db; /* Cambia el color de fondo a tu preferencia */
+        }
+
+        .navbar-top .navbar-nav .nav-link {
+            color: #fff; /* Cambia el color del texto de las opciones a tu preferencia */
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-top">
     <div class="container">
         <a class="navbar-brand" href="/capston/plantillas/inicio/index.php">Health Future</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/capston/plantillas/inicio/index.php">Home</a>
                 </li>
@@ -34,7 +66,7 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php
                         session_start();
                         if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
@@ -60,3 +92,6 @@
         </div>
     </div>
 </nav>
+<!-- Resto del contenido de tu página -->
+</body>
+</html>
