@@ -34,11 +34,23 @@
 
         /* Personaliza el fondo del encabezado superior */
         .navbar-top {
-            background-color: #3498db; /* Cambia el color de fondo a tu preferencia */
+            background-color: rgba(52, 152, 219, 0.8); /* Fondo azul semi-transparente */
         }
 
         .navbar-top .navbar-nav .nav-link {
             color: #fff; /* Cambia el color del texto de las opciones a tu preferencia */
+        }
+
+        /* Estilos para los campos azules semi-transparentes */
+        .blue-field {
+            background-color: rgba(52, 152, 219, 0.5); /* Fondo azul semi-transparente */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            margin: 20px auto; /* Centra los campos horizontalmente */
+        }
+
+        .blue-field h2 {
+            color: #fff; /* Color de texto en los campos azules */
         }
     </style>
 </head>
@@ -57,7 +69,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/inicio/caracteristicas.php">Características</a>
                 </li>
-                <li class="nav-item">
+                <li class "nav-item">
                     <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
                 </li>
                 <li class="nav-item">
@@ -92,6 +104,32 @@
         </div>
     </div>
 </nav>
-<!-- Resto del contenido de tu página -->
+
+<?php
+// Verificamos si estamos en la página de inicio (index.php)
+if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {
+    echo '<div class="container blue-field text-center">';
+    echo '<h2>Bienvenido a Health Future</h2>';
+    echo '<p>Tu fuente de información y herramientas para el cuidado de la salud personalizada.</p>';
+    echo '</div>';
+
+    echo '<div class="container blue-field text-center">';
+    echo '<h2>Características Destacadas</h2>';
+    echo '<div class="row">';
+    echo '<div class="col-md-4">';
+    echo '<div class="card">';
+    echo '<div class="card-body">';
+    echo '<h3 class="card-title">Evaluador de Salud</h3>';
+    echo '<p class="card-text">Realiza pruebas de salud personalizadas y obtén recomendaciones.</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    // Puedes agregar más tarjetas aquí si lo deseas
+    echo '</div>';
+    echo '</div>';
+}
+?>
+
+<!-- Continuación del contenido de tu página -->
 </body>
 </html>
