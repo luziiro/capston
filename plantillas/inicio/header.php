@@ -69,7 +69,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/inicio/caracteristicas.php">Características</a>
                 </li>
-                <li class "nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
                 </li>
                 <li class="nav-item">
