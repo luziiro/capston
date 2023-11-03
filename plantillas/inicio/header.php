@@ -116,7 +116,7 @@ if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {
     echo '<div class="container blue-field text-center">';
     echo '<h2>Características Destacadas</h2>';
     echo '<div class="row">';
-    echo '<div class="col-md-4">';
+    echo '<div class="col">';
     echo '<div class="card">';
     echo '<div class="card-body">';
     echo '<h3 class="card-title">Evaluador de Salud</h3>';
