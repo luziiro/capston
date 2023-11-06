@@ -130,6 +130,4 @@ if (basename($_SERVER['SCRIPT_NAME']) == 'index.php') {
 }
 ?>
 
-<!-- Continuación del contenido de tu página -->
-</body>
-</html>
+
