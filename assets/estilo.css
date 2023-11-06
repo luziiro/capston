@@ -6,6 +6,11 @@ body {
     padding: 0;
     color: #333;
     /* background-color: #212529; */
+    /* En estilo.css */
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-dibujado-mano-dia-nacional-medico_23-2149438164.jpg?w=1380&t=st=1698245771~exp=1698246371~hmac=d3090884e7b0ad6e01ec67311acab1d4ca40188c1af9840acec6f42e81b44172');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
