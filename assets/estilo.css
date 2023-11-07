@@ -7,12 +7,15 @@ body {
     color: #333;
     /* background-color: #212529; */
     /* En estilo.css */
-    background-image: url('https://img.freepik.com/vector-gratis/fondo-dibujado-mano-dia-nacional-medico_23-2149438164.jpg?w=1380&t=st=1698245771~exp=1698246371~hmac=d3090884e7b0ad6e01ec67311acab1d4ca40188c1af9840acec6f42e81b44172');
+    /*background-image: url('https://img.freepik.com/vector-gratis/fondo-dibujado-mano-dia-nacional-medico_23-2149438164.jpg?w=1380&t=st=1698245771~exp=1698246371~hmac=d3090884e7b0ad6e01ec67311acab1d4ca40188c1af9840acec6f42e81b44172');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 
+.img-fluid{
+    border-radius: 10px;
+}
 
 /* Encabezado */
 header {
@@ -79,4 +82,47 @@ footer {
 .logo {
     width: 40%;
     height: 40%;    
+}
+
+    /* Estilos personalizados navbar */
+
+.navbar {
+    background-color: transparent; /* Fondo transparente para que la imagen de fondo sea visible */
+}
+
+.navbar-brand {
+    color: #fff; /* Cambia el color del texto del logo a tu preferencia */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Cambia el color del ícono del botón del menú a tu preferencia */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Cambia el color del texto de las opciones del menú a tu preferencia */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Cambia el color al pasar el mouse sobre las opciones del menú a tu preferencia */
+}
+
+/* Personaliza el fondo del encabezado superior */
+.navbar-top {
+    background-color: rgba(52, 152, 219, 0.8); /* Fondo azul semi-transparente */
+}
+
+.navbar-top .navbar-nav .nav-link {
+    color: #fff; /* Cambia el color del texto de las opciones a tu preferencia */
+}
+
+/* Estilos para los campos azules semi-transparentes */
+.blue-field {
+    background-color: rgba(52, 152, 219, 0.5); /* Fondo azul semi-transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto; /* Centra los campos horizontalmente */
+}
+
+.blue-field h2 {
+    color: #fff; /* Color de texto en los campos azules */
 }

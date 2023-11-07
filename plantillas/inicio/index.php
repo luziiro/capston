@@ -2,6 +2,23 @@
 include 'header.php';
 ?>
 
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../../img/medicina.png" alt="Descripción de la imagen" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Bienvenido a nuestro Evaluador de Salud, 
+                tu compañero personal en el viaje hacia un bienestar integral. 
+                Con solo unos clics, podrás obtener una visión clara de tu estado de salud actual y recibir recomendaciones 
+                personalizadas para mejorar tu calidad de vida.</p>
+            </div>
+        </div>
+    </div>
+
+
     <div class="content">
         <header class="text-center py-5">
             <div class="container">
