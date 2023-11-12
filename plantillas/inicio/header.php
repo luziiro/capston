@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="/capston/assets/estilo.css">
     <link rel="stylesheet" type="text/css" href="estilo-fondo.css">
     <link rel="stylesheet" type="text/css" href="estilo.css">
+    <!-- Enlace al archivo diseño.css -->
+    <link rel="stylesheet" type="text/css" href="diseño.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-top">
@@ -59,5 +61,3 @@
         </div>
     </div>
 </nav>
-
-

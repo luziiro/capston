@@ -1,0 +1,54 @@
+.navbar {
+    background-color: rgba(0, 123, 255, 0.8); /* Azul más oscuro con ligera transparencia */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para profundidad */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4); /* Borde inferior más notable */
+}
+
+.navbar-brand,
+.nav-link {
+    color: white; /* Texto blanco para mejor contraste */
+    font-weight: bold; /* Fuente más gruesa para el texto */
+}
+
+.navbar-brand {
+    font-size: 1.5em; /* Tamaño más grande para la marca */
+}
+
+.nav-link {
+    padding: 10px 15px; /* Más espacio alrededor de los enlaces */
+}
+
+.nav-link:hover, .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto al pasar el ratón o enfocar */
+}
+
+.navbar-toggler {
+    border: none; /* Eliminar el borde predeterminado */
+    outline: none; /* Eliminar el contorno al enfocar */
+}
+
+.navbar-toggler-icon {
+    /* Asegúrate de cambiar 'ruta/a/tu/icono.png' con la ruta real a tu icono */
+    background-image: url('ruta/a/tu/icono.png'); /* Personaliza con tu icono */
+}
+
+/* Estilos para el menú dropdown */
+.dropdown-menu {
+    background-color: rgba(0, 123, 255, 0.9); /* Fondo azul para el menú */
+    border: none; /* Sin borde */
+}
+
+.dropdown-item {
+    color: white; /* Texto blanco para los elementos del menú */
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto al pasar el ratón o enfocar */
+}
+
+/* Estilos para vistas en dispositivos móviles */
+@media (max-width: 991px) {
+    .navbar {
+        background-color: rgba(0, 123, 255, 0.95); /* Menos transparencia en móviles */
+    }
+}

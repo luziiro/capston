@@ -1,5 +1,6 @@
 <?php include '../inicio/header.php'; ?>
 
+
 <style>
   .center {
     text-align: center;
