@@ -1,6 +1,6 @@
 <?php
 // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-$api_key = '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';
+$api_key = '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';
 
 // La pregunta que quieres hacer
 $pregunta = '¿Cuál es la capital de Francia?';
