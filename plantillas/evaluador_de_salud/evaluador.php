@@ -8,15 +8,16 @@ include '../inicio/header.php';
 
 // Función para enviar preguntas a la API de OpenAI
 function obtenerRespuestaIA($altura, $peso, $edad) {
-    // Crear una pregunta detallada para la IA (ajusta esta pregunta según tus necesidades)
-    $pregunta = "Basado en una altura de {$altura} metros, un peso de {$peso} kg y una edad de {$edad} años, ¿qué dieta y plan de vida recomiendas para mejorar la salud de esta persona?";
+    // Crear una pregunta muy detallada para la IA
+    $pregunta = "Considerando una persona con una altura de {$altura} metros, un peso de {$peso} kg y una edad de {$edad} años, ¿cuál sería un plan de salud integral que incluya una dieta equilibrada y un régimen de ejercicios? Por favor, detalla tipos de alimentos recomendados, cantidades, frecuencia de comidas, tipos de ejercicios, duración y frecuencia de las actividades físicas.";
 
+    // Quitar el límite de caracteres
     $data = [
         'prompt' => $pregunta,
-        'max_tokens' => 150  // Ajustar el número de tokens para mantener la respuesta dentro del límite de 750 caracteres
+        'max_tokens' => 500 // Aumentar el número de tokens para obtener respuestas más completas
     ];
 
-    $api_key = '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'; // Reemplaza esto con tu clave API real
+    $api_key = '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'; // Reemplaza esto con tu clave API real
 
     $ch = curl_init('https://api.openai.com/v1/engines/davinci/completions');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
