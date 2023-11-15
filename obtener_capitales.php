@@ -1,12 +1,14 @@
 <?php
+session_start(); // Inicia una nueva sesión o reanuda la existente
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recupera los países ingresados por el usuario
+    // Recupera los datos ingresados por el usuario
     $altura = $_POST['altura'];
     $peso = $_POST['peso'];
     $edad = $_POST['edad'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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';
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "Considerando una persona con una altura de {$altura} metros, un peso de {$peso} kg y una edad de {$edad} años, ¿cuál sería un plan de salud integral que incluya una dieta equilibrada y un régimen de ejercicios? Por favor, detalla tipos de alimentos recomendados, cantidades, frecuencia de comidas, tipos de ejercicios, duración y frecuencia de las actividades físicas.";
@@ -36,24 +38,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica si hubo un error con la solicitud
     if(curl_errno($ch)) {
-        echo 'Error en la solicitud cURL: ' . curl_error($ch);
+        $_SESSION['respuestaIA'] = 'Error en la solicitud cURL: ' . curl_error($ch);
     } else {
         // Decodifica la respuesta JSON
         $responseData = json_decode($response, true);
 
         // Verifica si la respuesta contiene la clave 'choices'
         if(isset($responseData['choices'])) {
-            // Imprime la respuesta (las capitales de los países)
-            echo "<h2>Las capitales de $altura y $edad y $peso son:</h2>";
-            echo "<p>" . $responseData['choices'][0]['text'] . "</p>";
+            $_SESSION['respuestaIA'] = $responseData['choices'][0]['text'];
         } else {
-            // Imprime la respuesta completa para depurar
-            echo "Respuesta recibida de la API:\n";
-            print_r($responseData);
+            $_SESSION['respuestaIA'] = "No se pudo obtener una respuesta. Detalles: " . json_encode($responseData);
         }
     }
 
     // Cierra la sesión cURL
     curl_close($ch);
+
+    // Redirecciona de vuelta al formulario
+    header('Location: formulario.php');
+    exit();
 }
 ?>
