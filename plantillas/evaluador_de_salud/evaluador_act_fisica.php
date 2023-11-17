@@ -3,7 +3,7 @@
 <div class="container mt-5">
         <h1>Actividad Física</h1>
         <p>Mejora tu estado físico y establece objetivos de ejercicio para mantener un estilo de vida saludable.</p>
-
+ 
         <div class="row">
             <div class="col-md-6">
                 <h2>Registro de Ejercicio</h2>

@@ -2,16 +2,17 @@
 session_start(); // Inicia una nueva sesión o reanuda la existente
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recupera los datos ingresados por el usuario
-    $altura = $_POST['altura'];
-    $peso = $_POST['peso'];
-    $edad = $_POST['edad'];
+    // Recupera los nuevos datos del formulario
+    $nivel_actividad = $_POST['activity-level'];
+    $habito_fumar = $_POST['smoking-habit'];
+    $habito_alcohol = $_POST['alcohol-habit'];
+    $habitos_alimenticios = $_POST['eating-habits'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
     $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
-    $pregunta = "Considerando una persona con una altura de {$altura} metros, un peso de {$peso} kg y una edad de {$edad} años, ¿cuál sería un plan de salud integral que incluya una dieta equilibrada y un régimen de ejercicios? Por favor, detalla tipos de alimentos recomendados, cantidades, frecuencia de comidas, tipos de ejercicios, duración y frecuencia de las actividades físicas.";
+    $pregunta = "";
 
     // Datos que enviarás a la API de OpenAI
     $data = [
@@ -55,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     curl_close($ch);
 
     // Redirecciona de vuelta al formulario
-    header('Location: formulario.php');
+    header('Location: evaluador_vida.php');
     exit();
 }
 ?>

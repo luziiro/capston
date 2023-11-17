@@ -11,11 +11,11 @@
             <form id="stress-form">
                 <div class="form-group">
                     <label for="stress-level">Nivel de estrés (del 1 al 10):</label>
-                    <input type="number" class="form-control" id="stress-level" min="1" max="10">
+                    <input type="number" name="nivel_estres" class="form-control" id="stress-level" min="1" max="10">
                 </div>
                 <div class="form-group">
                     <label for="stress-activity">Actividad relacionada con el estrés:</label>
-                    <select class="form-control" id="stress-activity">
+                    <select class="form-control" id="stress-activity" name="stress-activity">
                         <option value="trabajo">Trabajo</option>
                         <option value="familia">Problemas familiares</option>
                         <option value="estudios">Estudios</option>
@@ -24,6 +24,13 @@
                 </div>
                 <button style="margin-top: 10px" type="submit" class="btn btn-primary">Registrar Estrés</button>
             </form>
+            <?php if (isset($_SESSION['respuestaIA']) && !empty($_SESSION['respuestaIA'])): ?>
+            <div class="alert alert-info mt-4">
+                <strong>Respuesta de IA:</strong> <br>
+                <?php echo htmlspecialchars($_SESSION['respuestaIA']); ?>
+            </div>
+            <?php unset($_SESSION['respuestaIA']); // Limpia la variable de sesión después de mostrarla ?>
+            <?php endif; ?>
         </div>
         <div class="col-md-6">
             <h2>Registro de Estrés</h2>
@@ -36,6 +43,7 @@
 
 <?php include '../inicio/footer.php'; ?>
 
+<!--
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -87,3 +95,4 @@
         });
     });
 </script>
+-->
