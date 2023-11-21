@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1 class="text-center">Consulta de Salud con IA</h1>
-    <form method="post" action="obtener_capitales.php">
+    <form method="post" action="evuador_api.php">
         <div class="form-group">
             <label for="altura">Ingrese su altura:</label>
             <input class="form-control" placeholder="Ejemplo: 1.75" type="text" id="altura" name="altura" required>

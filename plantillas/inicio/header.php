@@ -6,10 +6,7 @@
     <title>Evaluador de Salud Personalizado</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoI... crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/capston/assets/estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo-fondo.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <!-- Enlace al archivo diseño.css -->
-    <link rel="stylesheet" type="text/css" href="diseño.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-top">
@@ -25,9 +22,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/inicio/caracteristicas.php">Características</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador.php">Evaluador(test)</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador_home.php">Escoge tu área</a>
