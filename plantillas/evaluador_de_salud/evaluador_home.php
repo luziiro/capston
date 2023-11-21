@@ -6,8 +6,9 @@
             <div class="col-md-6">
                 <div style="text-align: center;" class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Nutrición</h5>
-                        <p class="card-text">Administra tu dieta y consumo de calorías.</p>
+                        <h1 class="card-title">Nutrición</h1>
+                        <h5 class="card-text mb-4">Administra tu dieta y consumo de calorías.</h5>
+                        <p></p>
                         <a href="evaluador_nutricion.php" class="btn-eva">Ir a Nutrición</a>
                     </div>
                 </div>
