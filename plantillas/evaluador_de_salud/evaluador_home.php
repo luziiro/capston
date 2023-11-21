@@ -4,7 +4,7 @@
         <center><h1 class="mb-4">Elige una Área de Salud</h1></center>
         <div style="align-items: center;" class="row">
             <div class="col-md-6">
-                <div style="text-align: center;" class="card">
+                <div data-aos="fade-right" data-aos-delay="300" style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Nutrición</h1>
                         <h4 class="card-title text-success font-weight-bold">¡Descubre el Equilibrio Perfecto!</h4>
@@ -26,7 +26,7 @@
                 <img data-aos="fade-right" data-aos-delay="300" style="max-width: 70%;" src="../../img/fisica.png" alt="">
             </div>
             <div class="col-md-6">
-                <div style="text-align: center;" class="card">
+                <div data-aos="fade-left" data-aos-delay="300" style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Actividad Física</h1>
                         <h4 class="card-title text-primary font-weight-bold">Energiza tu Rutina Diaria</h4>
@@ -42,7 +42,7 @@
     <div class="container eva-3">
         <div style="align-items: center;" class="row">
             <div class="col-md-6">
-                <div style="text-align: center;" class="card">
+                <div data-aos="fade-right" data-aos-delay="300" style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Gestión del Estrés</h1>
                         <h4 class="card-title text-info font-weight-bold">Encuentra tu Oasis de Calma</h4>
@@ -64,7 +64,7 @@
                 <img data-aos="fade-right" data-aos-delay="300" style="max-width: 70%;" src="../../img/vida.png" alt="">
             </div>
             <div class="col-md-6">
-                <div style="text-align: center;" class="card">
+                <div data-aos="fade-left" data-aos-delay="300" style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Hábitos de Vida</h1>
                         <h4 class="card-title text-warning font-weight-bold">Transforma Tu Día a Día</h4>
