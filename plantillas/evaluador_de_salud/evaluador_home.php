@@ -7,6 +7,7 @@
                 <div style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Nutrición</h1>
+                        <h4 class="card-title text-success font-weight-bold">¡Descubre el Equilibrio Perfecto!</h4>
                         <h5 class="card-text mb-4">Administra tu dieta y consumo de calorías.</h5>
                         <p class="mb-4"></p>
                         <a href="evaluador_nutricion.php" class="btn-eva">Ir a Nutrición</a>
@@ -28,6 +29,7 @@
                 <div style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Actividad Física</h1>
+                        <h4 class="card-title text-primary font-weight-bold">Energiza tu Rutina Diaria</h4>
                         <h5 class="card-text mb-4">Mejora tu estado físico y establece objetivos de ejercicio.</h5>
                         <p class="mb-4"></p>
                         <a href="evaluador_act_fisica.php" class="btn-eva">Ir a Actividad Física</a>
@@ -43,6 +45,7 @@
                 <div style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Gestión del Estrés</h1>
+                        <h4 class="card-title text-info font-weight-bold">Encuentra tu Oasis de Calma</h4>
                         <h5 class="card-text mb-4">Aprende a manejar el estrés y la relajación.</h5>
                         <p class="mb-4"></p>
                         <a href="evaluador_gest_estres.php" class="btn-eva">Ir a Gestión del Estrés</a>
@@ -64,6 +67,7 @@
                 <div style="text-align: center;" class="card">
                     <div class="card-body">
                         <h1 class="card-title">Hábitos de Vida</h1>
+                        <h4 class="card-title text-warning font-weight-bold">Transforma Tu Día a Día</h4>
                         <h5 class="card-text mb-4">Evalúa y registra tus hábitos diarios para mantener un estilo de vida saludable.</h5>
                         <p class="mb-4"></p>
                         <a href="evaluador_vida.php" class="btn-eva">Ir a Hábitos de Vida</a>
