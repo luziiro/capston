@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluador de Salud Personalizado</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoI... crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/capston/assets/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoI... crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar-top {
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #343a40;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1em;
+            color: #343a40;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-top .navbar-nav .nav-link:hover {
+            color: #28a745;
+            text-decoration: none;
+            background-color: rgba(40, 167, 69, 0.1);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-top">
@@ -55,3 +95,4 @@
         </div>
     </div>
 </nav>
+
