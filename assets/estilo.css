@@ -26,3 +26,15 @@ footer {
 .btn-eva:hover {
     background-color: rgb(34, 191, 34); /* Cambia a verde cuando el mouse está sobre el botón */
 }
+
+/* estilo home */
+
+.h1-home {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.p-home {
+    font-size: 20px;
+}
+
