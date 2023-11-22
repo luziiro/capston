@@ -34,7 +34,10 @@ footer {
     font-weight: 700;
 }
 
-.p-home {
+.p-home {   
     font-size: 20px;
 }
 
+.form-control {
+    width: 20%;
+}

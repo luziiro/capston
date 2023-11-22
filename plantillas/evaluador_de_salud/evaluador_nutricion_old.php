@@ -33,7 +33,7 @@
                         <option value="super-active">Súper activo</option>
                     </select>
                 </div>
-                <button style="margin-top: 10px" type="submit" class="btn btn-primary">Calcular</button>
+                <button style="margin-top: 10px" type="submit" class="btn-eva">Calcular</button>
             </form>
             <!-- Resultado de calorías -->
             <div id="calories-result">
@@ -64,7 +64,7 @@
                         <option value="super-active">Súper activo</option>
                     </select>
                 </div>
-                <button style="margin-top: 10px" type="submit" class="btn btn-primary">Generar Plan</button>
+                <button style="margin-top: 10px" type="submit" class="btn-eva">Generar Plan</button>
             </form>
             <?php if (isset($_SESSION['respuestaIA']) && !empty($_SESSION['respuestaIA'])): ?>
             <div class="alert alert-info mt-4">

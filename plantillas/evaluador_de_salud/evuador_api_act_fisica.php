@@ -2,16 +2,16 @@
 session_start(); // Inicia una nueva sesión o reanuda la existente
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recupera los nuevos datos del formulario
-    $stress_level = $_POST['stress_level'];
-    $stress_activity = $_POST['stress_activity'];
-
+    // Recupera los datos ingresados por el usuario
+    $activity = $_POST['activity'];
+    $duration = $_POST['duration'];
+    $exercise_goal = $_POST['exercise-goal'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
     $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
-    $pregunta = "considerando que mi nivel de estres es de {$stress_level} y esta relacionado con esta actividad {$stress_activity}, como puedo reducir mi estres  ";
+    $pregunta = "Para el tipo de actividad {$activity}, con una duración de {$duration} minutos y un objetivo de ejercicio {$exercise_goal}, ¿cuáles serían las recomendaciones para un plan de salud integral que incluya un régimen de ejercicios? Por favor, detalla tipos de ejercicios, duración y frecuencia de las actividades físicas.";
 
     // Datos que enviarás a la API de OpenAI
     $data = [
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     curl_close($ch);
 
     // Redirecciona de vuelta al formulario
-    header('Location: evaluador_gest_estres.php');
+    header('Location: evaluador_act_fisica.php');
     exit();
 }
 ?>

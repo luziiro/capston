@@ -3,42 +3,31 @@
 <div class="container mt-5">
     <h1>Gestión del Estrés</h1>
     <p>Aprende a manejar el estrés y la relajación para mantener un estilo de vida saludable.</p>
-
-    <div class="row">
-        <div class="col-md-6">
             <h2>Diario de Estrés</h2>
             <p>Lleva un registro de tus niveles de estrés y actividades relacionadas:</p>
-            <form id="stress-form">
+            <form method="post" action="evuador_api_estres.php">
                 <div class="form-group">
                     <label for="stress-level">Nivel de estrés (del 1 al 10):</label>
-                    <input type="number" name="nivel_estres" class="form-control" id="stress-level" min="1" max="10">
+                    <input type="number" name="nivel_estres" class="form-control" id="stress_level" min="1" max="10">
                 </div>
                 <div class="form-group">
                     <label for="stress-activity">Actividad relacionada con el estrés:</label>
-                    <select class="form-control" id="stress-activity" name="stress-activity">
+                    <select class="form-control" id="stress_activity" name="stress_activity">
                         <option value="trabajo">Trabajo</option>
                         <option value="familia">Problemas familiares</option>
                         <option value="estudios">Estudios</option>
                         <option value="otro">Otro</option>
                     </select>
                 </div>
-                <button style="margin-top: 10px" type="submit" class="btn btn-primary">Registrar Estrés</button>
+                <button style="margin-top: 10px" type="submit" class="btn-eva">Registrar Estrés</button>
             </form>
             <?php if (isset($_SESSION['respuestaIA']) && !empty($_SESSION['respuestaIA'])): ?>
             <div class="alert alert-info mt-4">
-                <strong>Respuesta de IA:</strong> <br>
-                <?php echo htmlspecialchars($_SESSION['respuestaIA']); ?>
+            <strong>Respuesta de IA:</strong> <br>
+            <?php echo htmlspecialchars($_SESSION['respuestaIA']); ?>
             </div>
             <?php unset($_SESSION['respuestaIA']); // Limpia la variable de sesión después de mostrarla ?>
             <?php endif; ?>
-        </div>
-        <div class="col-md-6">
-            <h2>Registro de Estrés</h2>
-            <p>Aquí se muestra tu registro de niveles de estrés:</p>
-            <canvas id="stress-chart"></canvas>
-            <p id="stress-average-result"></p>
-        </div>
-    </div>
 </div>
 
 <?php include '../inicio/footer.php'; ?>

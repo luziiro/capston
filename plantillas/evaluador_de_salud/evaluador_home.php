@@ -1,6 +1,6 @@
 <?php include '../inicio/header.php'; ?>
 
-    <div class="container eva-1 mb-4">
+    <div class="container eva-1 mt-5">
         <center><h1 class="mb-4">Elige una Área de Salud</h1></center>
         <div style="align-items: center;" class="row">
             <div class="col-md-6">
