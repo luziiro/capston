@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body class="background-difuminado">
+<?php include '../inicio/header.php'; ?>
+
     <div class="container">
         <div class="row justify-content-center align-items-center vh-100">
             <div class="col-md-6">
@@ -42,7 +35,7 @@
                                     <option value="otro">Otro</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                            <center class="mt-4"><button type="submit" class="btn-eva">Registrarse</button></center>
                         </form>
                     </div>
                 </div>
@@ -65,5 +58,5 @@
             }
         });
     </script>
-</body>
-</html>
+    
+<?php include '../inicio/footer.php'; ?>

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $exercise_goal = $_POST['exercise-goal'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "Para el tipo de actividad {$activity}, con una duración de {$duration} minutos y un objetivo de ejercicio {$exercise_goal}, ¿cuáles serían las recomendaciones para un plan de salud integral que incluya un régimen de ejercicios? Por favor, detalla tipos de ejercicios, duración y frecuencia de las actividades físicas.";

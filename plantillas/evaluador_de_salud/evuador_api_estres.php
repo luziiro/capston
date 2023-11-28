@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "considerando que mi nivel de estres es de {$stress_level} y esta relacionado con esta actividad {$stress_activity}, como puedo reducir mi estres  ";

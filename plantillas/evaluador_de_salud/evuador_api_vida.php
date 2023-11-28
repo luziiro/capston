@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $habitos_alimenticios = $_POST['eating-habits'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "si mi nivel de actividad fisica es {$nivel_actividad} y mi consumo de tabaco es de {$habito_fumar}, mi consumo de alcohol es de {$habito_alcohol} y mis habitos alimenticios son {$habitos_alimenticios}, que deberia hacer para mantener un estilo de vida saludable y mejorar mi salud, se muy especifico";
