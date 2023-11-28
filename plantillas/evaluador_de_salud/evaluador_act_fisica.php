@@ -10,22 +10,22 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="activity">Tipo de actividad:</label>
-                        <input type="text" class="form-control" id="activity">
+                        <input type="text" class="form-control" id="activity" name="activity">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="duration">Duración (minutos):</label>
-                        <input type="number" class="form-control" id="duration">
+                        <input type="number" class="form-control" id="duration" name="duration">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="exercise_goal">Tipo de objetivo:</label>
-                        <select class="form-control" id="exercise_goal">
-                            <option value="weight-loss">Pérdida de peso</option>
-                            <option value="fitness">Mejora de la condición física</option>
-                            <option value="muscle-gain">Aumento de masa muscular</option>
+                        <select class="form-control" id="exercise_goal" name="exercise_goal">
+                            <option value="Pérdida de peso">Pérdida de peso</option>
+                            <option value="Mejora de la condición física">Mejora de la condición física</option>
+                            <option value="Aumento de masa muscular">Aumento de masa muscular</option>
                         </select>
                     </div>
                 </div>
