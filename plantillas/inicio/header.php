@@ -87,6 +87,7 @@
                         <?php
                         if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
                             echo '<li><a class="dropdown-item" href="/capston/plantillas/login/procesar_logout.php">Cerrar sesión</a></li>';
+                            echo '<li><a class="dropdown-item" href="/capston/plantillas/evaluador_de_salud/perfil.php">Perfil</a></li>';
                         } else {
                             echo '<li><a class="dropdown-item" href="/capston/plantillas/login/login.php">Ingresa</a></li>';
                             echo '<li><a class="dropdown-item" href="/capston/plantillas/registro/registro.php">Registro</a></li>';
