@@ -3,12 +3,14 @@ session_start(); // Inicia una nueva sesión o reanuda la existente
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recupera los nuevos datos del formulario
-    $stress_level = $_POST['stress_level'];
-    $stress_activity = $_POST['stress_activity'];
+    $stress_duration = $_POST['stress_duration'];
+    $stress_trigger = $_POST['stress_trigger'];
+    $trigger_custom = $_POST['trigger_custom'];
+    $stress_response = $_POST['stress_response'];
 
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "considerando que mi nivel de estres es de {$stress_level} y esta relacionado con esta actividad {$stress_activity}, como puedo reducir mi estres  ";
