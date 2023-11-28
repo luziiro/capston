@@ -65,13 +65,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/capston/plantillas/inicio/caracteristicas.php">Características</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador_home.php">Escoge tu área</a>
-                </li>
+                <?php
+                session_start();
+                if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
+                    echo '                <li class="nav-item"><a class="nav-link" href="/capston/plantillas/evaluador_de_salud/evaluador_home.php">Escoge tu área</a></li>';
+                } else {
+                    echo '';
+                }
+                ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php
-                        session_start();
                         if (isset($_SESSION['usuario_logueado']) && $_SESSION['usuario_logueado']) {
                             echo $_SESSION["nombre_usuario"];
                         } else {
