@@ -74,7 +74,6 @@
                                 <label for="objetivos">Objetivos de Salud:</label>
                                 <textarea class="form-control" id="objetivos" name="objetivos"></textarea>
                             </div>
-
                             <button style="margin-top: 10px" type="submit" class="btn-eva">Enviar Datos</button>
                         </form>
                     </div>

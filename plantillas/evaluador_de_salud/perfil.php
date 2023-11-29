@@ -245,7 +245,7 @@ $userId = $_SESSION['user_id']; // ID del usuario logueado
 
 // Inicializar variables con valores vacíos
 $nombreCompleto = $email = $fechaNacimiento = $sexo = "";
-$peso = $altura = $condiciones = $medicaciones = $estiloVida = $objetivos = "";
+$peso = $altura = $condiciones = $medicaciones = $historial_familiar = $habitos_alimenticios = $consumo_alcohol = $consumo_tabaco = $calidad_sueno = $presion_arterial = $frecuencia_cardiaca = $estilo_vida = $objetivos = "";
 
 // Primera consulta para obtener datos de la tabla usuarios
 $sqlUsuarios = "SELECT nombre, apellido, email, fecha_nacimiento, sexo FROM usuarios WHERE id = $userId";
@@ -260,7 +260,7 @@ if ($resultUsuarios->num_rows > 0) {
 }
 
 // Segunda consulta para obtener el último registro de la tabla usuarios_salud
-$sqlSalud = "SELECT peso, altura, condiciones, medicaciones, estilo_vida, objetivos FROM usuarios_salud WHERE user_id = $userId ORDER BY id DESC LIMIT 1";
+$sqlSalud = "SELECT peso, altura, condiciones, medicaciones, historial_familiar, habitos_alimenticios, consumo_alcohol, consumo_tabaco, calidad_sueno, presion_arterial, frecuencia_cardiaca, estilo_vida, objetivos FROM usuarios_salud WHERE user_id = $userId ORDER BY id DESC LIMIT 1";
 $resultSalud = $conn->query($sqlSalud);
 
 if ($resultSalud->num_rows > 0) {
@@ -271,6 +271,13 @@ if ($resultSalud->num_rows > 0) {
     $medicaciones = $rowSalud["medicaciones"];
     $estiloVida = $rowSalud["estilo_vida"];
     $objetivos = $rowSalud["objetivos"];
+    $historial_familiar = $rowSalud['historial_familiar'];
+    $habitos_alimenticios = $rowSalud['habitos_alimenticios'];
+    $consumo_alcohol = $rowSalud['consumo_alcohol'];
+    $consumo_tabaco = $rowSalud['consumo_tabaco'];
+    $calidad_sueno = $rowSalud['calidad_sueno'];
+    $presion_arterial = $rowSalud['presion_arterial'];
+    $frecuencia_cardiaca = $rowSalud['frecuencia_cardiaca'];
 }
 
 $conn->close();
@@ -290,6 +297,10 @@ $conn->close();
                     <li><i class="icono fas fa-calendar-alt"></i> Fecha de nacimiento: <?php echo $fechaNacimiento; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Sexo: <?php echo $sexo; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Estilo de vida: <?php echo $estiloVida; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Historial familiar: <?php echo $historial_familiar; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Consumo Alcohol: <?php echo $consumo_alcohol; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Calidad Sueño: <?php echo $calidad_sueno; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Frecuencia Cardiaca: <?php echo $frecuencia_cardiaca; ?></li>
                 </ul>
                 <ul class="lista-datos">
                     <li><i class="icono fas fa-venus-mars"></i> Altura: <?php echo $altura; ?></li>
@@ -297,6 +308,9 @@ $conn->close();
                     <li><i class="icono fas fa-venus-mars"></i> Condiciones: <?php echo $condiciones; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Medicaciones: <?php echo $medicaciones; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Objetivos: <?php echo $objetivos; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Habitos Alimenticios: <?php echo $habitos_alimenticios; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Consumo Tabaco: <?php echo $consumo_tabaco; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Presion Arterial: <?php echo $presion_arterial; ?></li>
                 </ul>
                 <div class="perfil-usuario-body-2">
                 <center><a href="mi_grafico_salud.php" class="btn-eva">Estadistica del perfil</a></center>

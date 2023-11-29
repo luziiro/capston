@@ -31,10 +31,17 @@ $condiciones = $_POST['condiciones'];
 $medicaciones = $_POST['medicaciones'];
 $estilo_vida = $_POST['estilo_vida'];
 $objetivos = $_POST['objetivos'];
+$historial_familiar = $_POST['historial_familiar'];
+$habitos_alimenticios = $_POST['habitos_alimenticios'];
+$consumo_alcohol = $_POST['consumo_alcohol'];
+$consumo_tabaco = $_POST['consumo_tabaco'];
+$calidad_sueno = $_POST['calidad_sueno'];
+$presion_arterial = $_POST['presion_arterial'];
+$frecuencia_cardiaca = $_POST['frecuencia_cardiaca'];
 $user_id = $_SESSION['user_id']; // ID del usuario logueado
 
 // Preparar la consulta SQL
-$sql = "INSERT INTO usuarios_salud (user_id, peso, altura, condiciones, medicaciones, estilo_vida, objetivos) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO usuarios_salud (user_id, peso, altura, condiciones, medicaciones, historial_familiar, habitos_alimenticios, consumo_alcohol, consumo_tabaco, calidad_sueno, presion_arterial, frecuencia_cardiaca, estilo_vida, objetivos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 // Preparar declaración
 $stmt = $conn->prepare($sql);
@@ -45,7 +52,7 @@ if ($stmt === false) {
 }
 
 // Asegúrate de que los tipos de datos aquí coincidan con los de tus columnas en la base de datos
-$stmt->bind_param("issssss", $user_id, $peso, $altura, $condiciones, $medicaciones, $estilo_vida, $objetivos);
+$stmt->bind_param("isssssssssssss", $user_id, $peso, $altura, $condiciones, $medicaciones, $historial_familiar, $habitos_alimenticios, $consumo_alcohol, $consumo_tabaco, $calidad_sueno, $presion_arterial, $frecuencia_cardiaca, $estilo_vida, $objetivos);
 
 // Ejecutar declaración
 if ($stmt->execute()) {
@@ -57,4 +64,8 @@ if ($stmt->execute()) {
 // Cerrar declaración y conexión
 $stmt->close();
 $conn->close();
+
+// Redirecciona de vuelta al formulario
+header('Location: perfil.php');
+exit();
 ?>
