@@ -67,7 +67,7 @@
 
                             <!-- Estilo de Vida y Objetivos -->
                             <div class="form-group">
-                                <label for="estilo_vida">Estilo de Vida (Ejercicio, Dieta, Sueño):</label>
+                                <label for="estilo_vida">Estilo de Vida (Sedentario, Activo, etc):</label>
                                 <textarea class="form-control" id="estilo_vida" name="estilo_vida"></textarea>
                             </div>
                             <div class="form-group">

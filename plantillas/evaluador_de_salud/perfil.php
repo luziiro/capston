@@ -33,7 +33,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#B873FF, transparent);
+    background: linear-gradient(#22BF22, transparent);
     margin-bottom: 1.25rem;
 }
 
@@ -41,8 +41,8 @@ body {
     display: block;
     position: relative;
     width: 90%;
-    height: 17rem;
-    background-image: linear-gradient(45deg, #BC3CFF, #317FFF);
+    height: 12rem;
+    /*background-image: linear-gradient(45deg, #BC3CFF, #317FFF);*/
     border-radius: 0 0 20px 20px;
 }
 
@@ -145,7 +145,7 @@ body {
 }
 
 .seccion-perfil-usuario .lista-datos li>.icono {
-    margin-right: 1rem;
+    /*margin-right: 1rem;*/
     font-size: 1.2rem;
     vertical-align: middle;
 }
@@ -285,6 +285,13 @@ $conn->close();
 
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">

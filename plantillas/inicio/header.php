@@ -93,7 +93,6 @@
                             echo '<li><a class="dropdown-item" href="/capston/plantillas/registro/registro.php">Registro</a></li>';
                         }
                         ?>
-                        <li><hr class="dropdown-divider"></li>
                     </ul>
                 </li>
             </ul>
