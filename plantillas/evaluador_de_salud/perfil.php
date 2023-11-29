@@ -243,6 +243,10 @@ if ($conn->connect_error) {
 
 $userId = $_SESSION['user_id']; // ID del usuario logueado
 
+// Inicializar variables con valores vacíos
+$nombreCompleto = $email = $fechaNacimiento = $sexo = "";
+$peso = $altura = $condiciones = $medicaciones = $estiloVida = $objetivos = "";
+
 // Primera consulta para obtener datos de la tabla usuarios
 $sqlUsuarios = "SELECT nombre, apellido, email, fecha_nacimiento, sexo FROM usuarios WHERE id = $userId";
 $resultUsuarios = $conn->query($sqlUsuarios);
@@ -253,8 +257,6 @@ if ($resultUsuarios->num_rows > 0) {
     $email = $rowUsuarios["email"];
     $fechaNacimiento = $rowUsuarios["fecha_nacimiento"];
     $sexo = $rowUsuarios["sexo"];
-} else {
-    echo "0 results en usuarios";
 }
 
 // Segunda consulta para obtener el último registro de la tabla usuarios_salud
@@ -269,8 +271,6 @@ if ($resultSalud->num_rows > 0) {
     $medicaciones = $rowSalud["medicaciones"];
     $estiloVida = $rowSalud["estilo_vida"];
     $objetivos = $rowSalud["objetivos"];
-} else {
-    echo "0 results en usuarios_salud";
 }
 
 $conn->close();
