@@ -4,37 +4,23 @@
     <h1>Gestión del Estrés</h1>
     <p>Aprende a manejar el estrés y la relajación para mantener un estilo de vida saludable.</p>
     <h2>Diario de Estrés</h2>
-    <p>Lleva un registro de tus niveles de estrés y cómo te afectan:</p>
+    <p>Describe tus experiencias y sentimientos relacionados con el estrés:</p>
     <form method="post" action="evuador_api_estres.php">
         <div class="form-group">
-            <label for="stress-duration">¿Cuánto tiempo has estado experimentando estrés significativo?</label>
-            <select class="form-control" id="stress_duration" name="stress_duration" onchange="showHideCustomInput(this, 'duration_custom')">
-                <option value="momentaneo">Unas pocas horas</option>
-                <option value="corto">Algunos días</option>
-                <option value="crónico">Varias semanas o más</option>
-                <option value="otro">Otro (especificar)</option>
-            </select>
-            <input type="text" name="duration_custom" class="form-control mt-2" id="duration_custom" placeholder="Especifique la duración" style="display: none;">
+            <label for="stress_description">Describa su situación actual de estrés:</label>
+            <textarea class="form-control" id="stress_description" name="stress_description" rows="3" placeholder="Escribe aquí sobre tu situación de estrés..."></textarea>
         </div>
         <div class="form-group">
-            <label for="stress-trigger">¿Qué crees que está causando tu estrés?</label>
-            <select class="form-control" id="stress_trigger" name="stress_trigger" onchange="showHideCustomInput(this, 'trigger_custom')">
-                <option value="trabajo">Presión laboral</option>
-                <option value="relaciones">Desafíos en relaciones personales</option>
-                <option value="salud">Preocupaciones por la salud</option>
-                <option value="finanzas">Dificultades financieras</option>
-                <option value="otro">Otro (especificar)</option>
-            </select>
-            <input type="text" name="trigger_custom" class="form-control mt-2" id="trigger_custom" placeholder="Especifique el desencadenante" style="display: none;">
+            <label for="stress_causes">¿Cuáles crees que son las causas de tu estrés?</label>
+            <textarea class="form-control" id="stress_causes" name="stress_causes" rows="3" placeholder="Escribe aquí sobre las posibles causas de tu estrés..."></textarea>
         </div>
         <div class="form-group">
-            <label for="stress-response">¿Cómo sueles reaccionar al estrés?</label>
-            <select class="form-control" id="stress_response" name="stress_response">
-                <option value="evitacion">Intentando evitar la situación</option>
-                <option value="enfrentamiento">Enfrentando el problema directamente</option>
-                <option value="busqueda_ayuda">Buscando apoyo de amigos o profesionales</option>
-                <option value="ninguna">No estoy seguro/a</option>
-            </select>
+            <label for="stress_impact">¿Cómo te afecta el estrés en tu vida diaria?</label>
+            <textarea class="form-control" id="stress_impact" name="stress_impact" rows="3" placeholder="Escribe aquí sobre cómo te afecta el estrés..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="stress_coping">¿Cómo sueles manejar el estrés?</label>
+            <textarea class="form-control" id="stress_coping" name="stress_coping" rows="3" placeholder="Escribe aquí sobre tus estrategias para manejar el estrés..."></textarea>
         </div>
         <button style="margin-top: 10px" type="submit" class="btn-eva">Registrar Estrés</button>
     </form>
@@ -46,17 +32,5 @@
     <?php unset($_SESSION['respuestaIA']); // Limpia la variable de sesión después de mostrarla ?>
     <?php endif; ?>
 </div>
-
-<script>
-    function showHideCustomInput(select, customInputId) {
-        var selectedOption = select.value;
-        var customInput = document.getElementById(customInputId);
-        if (selectedOption === 'otro') {
-            customInput.style.display = 'block';
-        } else {
-            customInput.style.display = 'none';
-        }
-    }
-</script>
 
 <?php include '../inicio/footer.php'; ?>
