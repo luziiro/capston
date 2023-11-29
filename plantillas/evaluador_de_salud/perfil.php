@@ -299,7 +299,7 @@ $conn->close();
                     <li><i class="icono fas fa-venus-mars"></i> Objetivos: <?php echo $objetivos; ?></li>
                 </ul>
                 <div class="perfil-usuario-body-2">
-                <center><a href="#" class="btn-eva">Estadistica del perfil</a></center>
+                <center><a href="mi_grafico_salud.php" class="btn-eva">Estadistica del perfil</a></center>
                 </div>
             </div>
         </div>
