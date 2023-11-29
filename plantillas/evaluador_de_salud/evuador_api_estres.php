@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stress_trigger = $_POST['stress_trigger'];
     $trigger_custom = $_POST['trigger_custom'];
     $stress_response = $_POST['stress_response'];
+    $duration_custom = $_POST['duration_custom'];
 
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
