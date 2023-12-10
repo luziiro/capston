@@ -291,6 +291,9 @@ $conn->close();
                         <i class="far fa-image"></i>
                     </button>
                 </div>
+                <button type="button" class="boton-portada" onclick="location.href='historial.php'">
+                    Historial
+                </button>
             </div>
         </div>
         <div class="perfil-usuario-body">
