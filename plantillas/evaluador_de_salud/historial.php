@@ -1,5 +1,7 @@
 <?php include '../inicio/header.php';?>
-    <h1>Historial de Usuarios de Salud</h1>
+    <br>
+    <center><h1>Historial de Usuarios de Salud</h1></center>
+    <br>
     <table class="table table-bordered" border="1">
         <tr>
             <th>Peso</th>

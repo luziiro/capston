@@ -137,23 +137,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Asegúrate de que la respuesta de la API no esté vacía antes de intentar guardarla en la base de datos
     if (!empty($respuestaAPI)) {
-        // Guardar la respuesta de la API en la base de datos
-        $sql = "UPDATE usuarios_salud
-        SET respuesta_api = ?, 
-            peso = ?, 
-            altura = ?, 
-            condiciones = ?, 
-            medicaciones = ?, 
-            estilo_vida = ?, 
-            objetivos = ?, 
-            historial_familiar = ?, 
-            habitos_alimenticios = ?, 
-            consumo_alcohol = ?, 
-            consumo_tabaco = ?, 
-            calidad_sueno = ?, 
-            presion_arterial = ?, 
-            frecuencia_cardiaca = ?
-        WHERE user_id = ?";
+        // Insertar una nueva fila en la tabla usuarios_salud con la respuesta de la API y otros datos
+        $sql = "INSERT INTO usuarios_salud (user_id, respuesta_api, peso, altura, condiciones, medicaciones, estilo_vida, objetivos, historial_familiar, habitos_alimenticios, consumo_alcohol, consumo_tabaco, calidad_sueno, presion_arterial, frecuencia_cardiaca) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
         if ($stmt === false) {
@@ -161,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Asegúrate de que los tipos de datos en bind_param sean correctos
-        $stmt->bind_param("sissssssssssssi", $respuestaAPI, $peso, $altura, $condiciones, $medicaciones, $estilo_vida, $objetivos, $historial_familiar, $habitos_alimenticios, $consumo_alcohol, $consumo_tabaco, $calidad_sueno, $presion_arterial, $frecuencia_cardiaca, $user_id);
+        $stmt->bind_param("isssssssssssssi", $user_id, $respuestaAPI, $peso, $altura, $condiciones, $medicaciones, $estilo_vida, $objetivos, $historial_familiar, $habitos_alimenticios, $consumo_alcohol, $consumo_tabaco, $calidad_sueno, $presion_arterial, $frecuencia_cardiaca);
 
         if (!$stmt->execute()) {
             echo "Error al guardar la respuesta de la API: " . $stmt->error;
