@@ -269,7 +269,7 @@ if ($resultSalud->num_rows > 0) {
     $altura = $rowSalud["altura"];
     $condiciones = $rowSalud["condiciones"];
     $medicaciones = $rowSalud["medicaciones"];
-    $estiloVida = $rowSalud["estilo_vida"];
+    $estilo_Vida = $rowSalud["estilo_vida"];
     $objetivos = $rowSalud["objetivos"];
     $historial_familiar = $rowSalud['historial_familiar'];
     $habitos_alimenticios = $rowSalud['habitos_alimenticios'];
@@ -306,7 +306,7 @@ $conn->close();
                     <li><i class="icono fas fa-envelope"></i> Email: <?php echo $email; ?></li>
                     <li><i class="icono fas fa-calendar-alt"></i> Fecha de nacimiento: <?php echo $fechaNacimiento; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Sexo: <?php echo $sexo; ?></li>
-                    <li><i class="icono fas fa-venus-mars"></i> Estilo de vida: <?php echo $estiloVida; ?></li>
+                    <li><i class="icono fas fa-venus-mars"></i> Estilo de vida: <?php echo $estilo_vida; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Historial familiar: <?php echo $historial_familiar; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Consumo Alcohol: <?php echo $consumo_alcohol; ?></li>
                     <li><i class="icono fas fa-venus-mars"></i> Calidad Sueño: <?php echo $calidad_sueno; ?></li>
