@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $enfermedad = $_POST['enfermedad'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "Considerando una persona con una altura de {$altura} metros, un peso de {$peso} kg y una edad de {$edad} años, ¿cuál sería un plan de salud integral que incluya una dieta equilibrada y un régimen de ejercicios? Por favor, detalla tipos de alimentos recomendados, cantidades, frecuencia de comidas, tipos de ejercicios, duración y frecuencia de las actividades físicas, tambien ten en cuenta esta enfermedad del paciente {$enfermedad}.";

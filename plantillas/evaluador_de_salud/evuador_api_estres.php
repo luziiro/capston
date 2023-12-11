@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stress_coping = $_POST['stress_coping'] ?? 'No especificado';
 
     // Tu clave API de OpenAI
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "Descripción del estrés: '{$stress_description}'. Causas del estrés: '{$stress_causes}'. Impacto del estrés: '{$stress_impact}'. Estrategias de afrontamiento: '{$stress_coping}'. ¿Cuáles son las mejores estrategias para manejar esta situación específica de estrés?";

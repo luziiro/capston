@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $frecuencia_cardiaca = $_POST['frecuencia_cardiaca'];
 
     // Tu clave API de OpenAI (asegúrate de usar una clave válida y mantenerla segura)
-    $api_key = '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'; // Reemplaza con tu clave API real
+    $api_key = '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'; // Reemplaza con tu clave API real
 
     // Formula la pregunta para la API
     $pregunta = "hazme una prediccion a futuro sobre la salud de esta persona basado en estos datos que te dare: su peso que es este {$peso}(ignorar si no esta el peso), su altura es esta {$altura}(ignorar si no esta la altura), tiene esta condicion medica {$condiciones}(ignorar si no hay condicion medica),toma esta medicacion {$medicaciones}(ignorar si no hay medicaciones),tiene este historial medico {$historial_familiar}(ignorar si no hay historial medico),tiene estos habitos alimenticios {$habitos_alimenticios}(ignorar si no hay habitos alimenticios),tiene este consumo de alcohol por semana {$consumo_alcohol},tiene este consumo de tabaco por semana {$consumo_tabaco},esta es su calidad de sueño {$calidad_sueno}(ignorar si no hay calidad de sueño),tiene esta presion arterial {$presion_arterial},tiene esta frecuencia cardiaca {$frecuencia_cardiaca}(ignorar si no hay frecuencia cardiaca),tiene este estilo de vida {$estilo_vida}(ignorar si no hay estilo de vida),este es su objetivo {$objetivos}(ignorar si no hay objetivos)";
